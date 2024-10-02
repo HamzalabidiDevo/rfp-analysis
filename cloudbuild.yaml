@@ -13,6 +13,5 @@ steps:
       - 'push'
       - 'us-central1-docker.pkg.dev/ksahamzala-sb-hamzalab/testnodejsser/my-app:${SHORT_SHA}'
 
-  # Store images in Google Artifact Registry
-  images:
-    - 'us-central1-docker.pkg.dev/ksahamzala-sb-hamzalab/testnodejsser/my-app:${SHORT_SHA}'
+images:
+  - 'us-central1-docker.pkg.dev/ksahamzala-sb-hamzalab/testnodejsser/my-app:${SHORT_SHA}'
