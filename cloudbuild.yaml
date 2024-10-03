@@ -26,6 +26,8 @@ steps:
       - 'us-central1-docker.pkg.dev/ksahamzala-sb-hamzalab/testnodejsser/my-app:${SHORT_SHA}'
       - '--region'
       - 'me-west1'
+      - '--service-account'
+      - 'test-cloud-build3@ksahamzala-sb-hamzalab.iam.gserviceaccount.com'
     
 
 images:
