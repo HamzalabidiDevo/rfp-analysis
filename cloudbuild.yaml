@@ -15,5 +15,16 @@ steps:
       - 'push'
       - 'us-central1-docker.pkg.dev/ksahamzala-sb-hamzalab/testnodejsser/my-app:${SHORT_SHA}'
 
+  # Push to cloud run
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    args:
+      - 'run'
+      - 'deploy'
+      - 'my-app'
+      - '--image'
+      - 'us-central1-docker.pkg.dev/ksahamzala-sb-hamzalab/testnodejsser/my-app:${SHORT_SHA}'
+      - '--region'
+      - 'me-west1'
+
 images:
   - 'us-central1-docker.pkg.dev/ksahamzala-sb-hamzalab/testnodejsser/my-app:${SHORT_SHA}'
